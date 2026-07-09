@@ -142,3 +142,4 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
 upload_images/*
+design.png
