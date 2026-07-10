@@ -69,6 +69,14 @@ section {
   color: var(--color-on-primary);
 }
 
+.logo {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+.logo span {
+  color: var(--color-on-secondary-fixed);
+}
+
 #hero {
   background:
     linear-gradient(
@@ -181,14 +189,58 @@ section {
 #dropzone {
   border: 2px dashed var(--color-on-secondary-container) !important;
   cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 16px;
+}
+
+#dropzone:hover {
+  border-color: var(--color-primary) !important;
+  background-color: color-mix(in srgb, var(--color-primary) 4%, transparent);
 }
 
 #dropzone i {
-  transition: transform 0.5s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+  color: var(--color-on-secondary-container);
 }
 
 #dropzone:hover i {
   color: var(--color-primary);
+  transform: translateY(-4px);
+}
+
+#dropzone.dragging {
+  border-color: var(--color-primary) !important;
+  background-color: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  transform: scale(1.01);
+}
+
+#dropzone.dragging i {
+  color: var(--color-primary);
+  transform: translateY(-4px) scale(1.1);
+}
+
+#dropzone.upload-success {
+  border-color: #1e8e3e !important;
+  background-color: color-mix(in srgb, #1e8e3e 8%, transparent);
+}
+
+#dropzone.upload-success i {
+  color: #1e8e3e;
+}
+
+#dropzone.upload-error {
+  border-color: #d93025 !important;
+  background-color: color-mix(in srgb, #d93025 8%, transparent);
+}
+
+#dropzone.upload-error i {
+  color: #d93025;
+}
+
+#dropzone h5 {
+  transition: color 0.3s ease;
 }
 
 #community .row div {
@@ -225,4 +277,8 @@ section {
   background-color: var(--color-on-primary);
   color: var(--color-primary);
   padding: 0.5rem 3rem;
+}
+
+footer {
+  padding-block: 2rem;
 }
