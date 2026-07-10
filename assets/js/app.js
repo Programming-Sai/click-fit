@@ -148,7 +148,6 @@ $(document).ready(function () {
     url: "http://localhost:3000/api/upload",
     paramname: "image",
     maxfiles: 1,
-    maxfilesize: 10,
     allowedfiletypes: ["image/jpeg", "image/png", "image/webp"],
 
     dragOver: function () {
